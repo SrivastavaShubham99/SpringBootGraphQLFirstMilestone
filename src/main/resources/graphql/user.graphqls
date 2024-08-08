@@ -1,0 +1,30 @@
+
+input User{
+    firstName : String
+    lastName : String
+    mobile : String
+    email : String!
+}
+
+type UserResponse{
+    firstName : String
+    lastName : String
+    mobile : String
+    email : String!
+}
+
+
+extend type Query {
+    getUserById(id : Int) : UserResponse
+}
+
+extend type Mutation{
+    createUser(user : User) : String
+    updateUser(user : User, id : Int) : String
+    deleteUser(id : Int) : String
+}
+
+
+
+
+

@@ -1,0 +1,20 @@
+
+
+type Mutation{
+    createStudent(studentRequest : StudentRequest) : String
+    createCourse(course : StudentRequest) : String
+}
+
+input StudentRequest{
+    firstName : String
+    lastName : String
+    street : String
+    city : String
+    optCoursesList : [OptCourses]
+}
+
+
+input OptCourses{
+    courseName : String
+    stream : String
+}
